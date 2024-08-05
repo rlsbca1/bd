@@ -56,7 +56,7 @@ for line in sys.stdin:
     line = line.strip()
     words = line.split()
     for word in words:
-        print '%s\t%s' % (word, 1)
+    print '%s\t%s' % (word, 1)
 
 ```
 
@@ -193,8 +193,4 @@ for line in sys.stdin:
 for dept in deptdic.keys():
     sum_sal = sum(deptdic[dept])
     print '%s\t%s'% (dept,sum_sal)
-```
-
-```py
-
 ```
