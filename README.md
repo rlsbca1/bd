@@ -50,41 +50,29 @@ if current_word == word:
 # 2. mapper.py
 
 ```py
-#!/usr/bin/env python
-import sys
-for line in sys.stdin:
-    line = line.strip()
-    words = line.split()
-    for word in words:
-    print '%s\t%s' % (word, 1)
-
+import string
+import fileinput
+for line in fileinput.input():
+    data = line.strip().split("\t")
+    if len(data) == 6:
+        date, time, location, item, cost, payment = data
+        print "{0}\t{1}".format(location, cost)
 ```
 
 # 2. reducer.py
 
 ```py
-#!/usr/bin/env python
-from operator import itemgetter
-import sys
-current_word = None
-current_count = 0
-word = None
-for line in sys.stdin:
-    line = line.strip()
-    word, count = line.split('\t', 1)
-    try:
-        count = int(count)
-    except ValueError:
+import fileinput
+transactions_count = 0
+sales_total = 0
+for line in fileinput.input():
+    data = line.strip().split("\t")    
+    if len(data) != 2:
         continue
-    if current_word == word:
-        current_count += count
-    else:
-        if current_word:
-            print '%s\t%s' % (current_word, current_count)
-        current_count = count
-        current_word = word
-if current_word == word:
-    print '%s\t%s' % (current_word, current_count)
+    current_key, current_value = data
+    transactions_count += 1
+    sales_total += float(current_value)
+print transactions_count, "\t", sales_total
 
 ```
 # 
