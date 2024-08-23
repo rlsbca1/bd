@@ -87,6 +87,15 @@ print transactions_count, "\t", sales_total
 # 
 # 3: Map Reduce program to calculate the average age for each gender.
 
+- t3.csv
+
+```bash
+0001,1,21,72,180,3,1
+0002,2,33,62,110,1,2
+0003,1,43,52,80,1,2
+0004,2,23,83,90,1,2
+```
+
 # 3. mapper.py
 
 ```py
@@ -102,15 +111,6 @@ for line in sys.stdin:
 ```
 
 # 3. reducer.py
-
-- t3.csv
-```bash
-0001,1,21,72,180,3,1
-0002,2,33,62,110,1,2
-0003,1,43,52,80,1,2
-0004,2,23,83,90,1,2
-```
-
 ```py
 #!/usr/bin/python
 import sys
