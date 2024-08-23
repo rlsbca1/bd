@@ -123,8 +123,8 @@ for gender in gender_age.keys():
 
 - data.csv
 ```bash
-1, M, 25000, 2, Agree
-2, F, 50000, 1, Disagree
+1,M,25000,2,Agree
+2,F,50000,1,Disagree
 3,M,75000,0,Neutral
 4,F,80000,2,Agree
 5,F,10000,1,DisAgree
