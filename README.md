@@ -57,6 +57,7 @@ if current_word == word:
 # 2. mapper.py
 
 ```py
+#!/usr/bin/env python
 import string
 import fileinput
 for line in fileinput.input():
@@ -69,6 +70,7 @@ for line in fileinput.input():
 # 2. reducer.py
 
 ```py
+#!/usr/bin/env python
 import fileinput
 transactions_count = 0
 sales_total = 0
@@ -103,10 +105,10 @@ for line in sys.stdin:
 
 - t3.csv
 ```bash
-'''0001''',1,21,72,180,3,1"
-'''0002''',2,33,62,110,1,2"
-'''0003''',1,43,52,80,1,2"
-'''0004''',2,23,83,90,1,2"
+0001,1,21,72,180,3,1
+0002,2,33,62,110,1,2
+0003,1,43,52,80,1,2
+0004,2,23,83,90,1,2
 ```
 
 ```py
