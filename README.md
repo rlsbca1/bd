@@ -47,6 +47,13 @@ if current_word == word:
 # 
 # 2: Map Reduce program to display the number of transactions and sales count from shopping cart.
 
+- shopping.txt
+
+```bash
+2012-07-16     15:43	 Bangalore	Men's Clothing	208.97	Visa	
+2012-07-18     20:15	 Mumbai  	Electronics	1005.20	cash
+```
+
 # 2. mapper.py
 
 ```py
@@ -77,6 +84,7 @@ print transactions_count, "\t", sales_total
 ```
 # 
 # 3: Map Reduce program to calculate the average age for each gender.
+
 # 3. mapper.py
 
 ```py
@@ -112,6 +120,23 @@ for gender in gender_age.keys():
 
 #
 # 4. TERMWORK4
+
+- data.csv
+```bash
+1, M, 25000, 2, Agree
+2, F, 50000, 1, Disagree
+3,M,75000,0,Neutral
+4,F,80000,2,Agree
+5,F,10000,1,DisAgree
+6,F,20000,3,Neutral
+7,M,17000,0,DisAgree
+8,F,15000,0,DisAgree
+9,M,60000,1,Agree
+10,F,45000,1,Agree
+11,F,46000,3,DisAgree
+12,F,50000,3,Neutral
+```
+
 # 4. mapper.py
 
 ```py
@@ -148,6 +173,26 @@ for op in opiniondic.keys():
 
 
 # 5. TERMWORK5
+
+- t5.csv
+```bash
+E001, Sunita, Accounts, 15000 
+E002, Harsh, IT, 50000
+E003, Ragini, IT, 75000
+E004, Mithun, Accounts, 20000 
+E005, Pruthavi, Marketing, 45000
+E006, Anjali, IT, 70000
+E007, Kunal, Marketing, 60000
+E008, Mitali, Accounts, 55000
+E009, Roopa, IT, 70000
+E010, Deepti, Accounts, 30000 
+E011, Janavi, Marketing, 25000
+E012, Lata, Accounts, 30000 
+E013, Brijmohan, Marketing, 45000
+E014, Nina, Accounts, 50000
+E015, Pallavi, Marketing, 25000
+```
+
 # 5. mapper.py
 
 ```py
